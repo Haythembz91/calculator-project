@@ -9,13 +9,22 @@ let equalKey = document.querySelector('.equalKey')
 let overwrite = false
 
 let sqr = document.querySelector('.sqr')
-sqr.addEventListener('click',()=>result.innerHTML=Math.pow(parseFloat(result.innerHTML),2))
+sqr.addEventListener('click',()=>{
+    overwrite=true
+    result.innerHTML=Math.pow(parseFloat(result.innerHTML),2)
+})
 
 let sqrt = document.querySelector('.sqrt')
-sqrt.addEventListener('click',()=>result.innerHTML=Math.sqrt(parseFloat(result.innerHTML)))
+sqrt.addEventListener('click',()=>{
+    overwrite=true
+    result.innerHTML=Math.sqrt(parseFloat(result.innerHTML))
+})
 
 let mathPi = document.querySelector('.math-pi')
-mathPi.addEventListener('click',() => result.innerHTML = Math.PI.toFixed(10))
+mathPi.addEventListener('click',() => {
+    overwrite=true
+    result.innerHTML = Math.PI.toFixed(10)
+})
 
 
 
